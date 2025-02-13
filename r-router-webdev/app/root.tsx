@@ -11,9 +11,11 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import Page1 from "./routes/financas";
-import Page2 from "./routes/dashboard";
-import Page3 from "./routes/compras";
+import Page1 from "./routes/cadastroGMS";
+import Page2 from "./routes/cadastroFornecedor";
+import Page3 from "./routes/cadastroDados";
+import Navbar from "./components/Navbar";
+import Logo from "./components/Logo";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -30,7 +32,7 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,17 +40,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <div className="flex bg-gray-200 h-lvh inset-shadow-gray-900">
-          <div className="sidebar flex flex-col h-full bg-gray-900">
-            <NavLink className='focus:bg-gray-600 ative:w-full p-2' to="/dashboard">Dashboard</NavLink>
-            <NavLink className='focus:bg-gray-600 ative:w-full p-2' to="/compras">Compras</NavLink>
-            <NavLink className='focus:bg-gray-600 ative:w-full p-2' to="/financas">Finanças</NavLink>
-          </div>
-          <div className="content p-4 text-gray-900">
-            {children}
-          </div>
-            <ScrollRestoration />
-        </div>
+        {children}
+        <ScrollRestoration />
         <Scripts />
       </body>
     </html>
@@ -56,7 +49,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="flex bg-gray-200 h-lvh inset-shadow-gray-900">   
+      <Navbar />
+      <div className="content p-4 text-gray-900">
+        <Outlet />
+      </div>
+    </div>)
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

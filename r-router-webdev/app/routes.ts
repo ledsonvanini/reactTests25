@@ -7,8 +7,9 @@ import {
 } from "@react-router/dev/routes";
 
 export default [
-    index("routes/home.tsx"),
-    route("financas","routes/financas.tsx"),
-    route("dashboard","routes/dashboard.tsx"),
-    route("compras","routes/compras.tsx"),
+    index("routes/login.tsx"),
+    route("cadastro-gms","routes/cadGMS.tsx"),
+    route("cadastro-dados","routes/cadDados.tsx"),
+    route("cadastro-fornecedor","routes/cadFornecedor.tsx"),
+    route("pesquisa-contrato","routes/pesquisar.tsx"),
 ] satisfies RouteConfig;
