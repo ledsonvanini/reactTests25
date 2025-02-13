@@ -1,0 +1,74 @@
+@import url('../../global.css');
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.title {
+    color: #5b1ccf;
+    text-align: center;
+}
+.empty {
+    text-align: center;
+
+}
+.appContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 540px;
+    background-color: #cfc8eb;
+    gap:1rem;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--base);
+}
+.formRow {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.formRow input {
+    flex:1;
+    padding:.7rem;
+    font-weight: 600;
+    color: #636363;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.addButton {
+    background-color: var(--base);
+    padding: 6px;
+    color: var(--light1);
+    font-weight: 600;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+}
+.addButton:hover {
+    background-color: var(--base-hover);
+}
+.todoList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 90%;
+}
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    background-color: var(--base1);
+    color: var(--base);
+    font-weight: 500;
+    padding: .4rem;
+    border-radius: 4px;
+}
+.deleteButton {
+    background-color: var(--red1);
+    color: var(--light1);
+    padding:4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}

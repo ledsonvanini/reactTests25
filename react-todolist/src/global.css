@@ -1,0 +1,25 @@
+:root {
+    --base: #5b1ccf;
+    --base1: #bb9af8;
+    --base-hover: #4a17a8;
+    --red0: #a8171e;
+    --red1: #cf3f46;
+    /* Font*/
+    --white: #fff; 
+    --light1:#e4d6ff; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+ul li {
+    list-style: none;
+}
