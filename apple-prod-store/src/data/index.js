@@ -48,9 +48,15 @@ export const iphoneModels = [
         img: 'images/iphone16-pro-max.png',
     },
     {
+        name: 'iPhone 16 Plus',
+        description: 'A total powerhouse',
+        price: 'From $799',
+        img: 'images/iphone16-plus.png',
+    },
+    {
         name: 'iPhone 16',
         description: 'As amazing as ever',
-        price: 'From $799',
+        price: 'From $599',
         img: 'images/iphone16.png',
     }
 ]

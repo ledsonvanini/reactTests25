@@ -15,7 +15,7 @@ function Home() {
           draggable='false'
         />
       </div>
-
+  
       ))}
     </div>
   )
