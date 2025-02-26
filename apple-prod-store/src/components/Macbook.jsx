@@ -13,7 +13,7 @@ function Macbook() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-around bg-white p-8">
+    <div className="flex flex-col items-center justify-around bg-white p-8 h-full">
       <h1 className="2xl:text-4xl xl:text-3xl md:text-2xl font-semibold text-gray-800 mb-8">
         Choose Your new MacBbook Air
       </h1>
@@ -38,6 +38,7 @@ function Macbook() {
             alt={`MacBook Air with ${currentMacbook.name} chip`}
             className='2xl:w-72 xl:w-52 h-full 2xl:mt-0 sm:mt-6'
           />
+          </div>
           <span className="2xl:text-lg xl:text-sm font-medium text-gray-800 mb-2 text-center md:text-left">
             {currentColor.label}
           </span>
@@ -67,7 +68,7 @@ function Macbook() {
               Buy
             </button>
         </div>
-      </div>
+      
     </div>
   )
 }
